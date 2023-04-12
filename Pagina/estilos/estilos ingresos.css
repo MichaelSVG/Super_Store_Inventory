@@ -1,0 +1,271 @@
+/*overlay*/
+.overlay{
+    border:none;
+    border-bottom:1px solid;
+            background: rgba(0,0,0,.3);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+
+        }
+        #btn-overlay:checked ~ .overlay{
+            opacity: 1;
+            visibility: visible;
+        }
+        .popup{
+            background: white;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+            padding: 10%;
+            border: solid 2% black;
+            border-radius:1%;
+            text-align: center;
+            width: 50%;
+            height: 90%;
+        }
+        
+        .btn-cerrar-popup{
+            text-decoration: none;
+            font-size: 7%;
+            line-height: 7%;
+            display: block;
+            text-align: right;
+            color: red;
+            transition: .3s ease all;
+            margin-top: 2%;
+            margin-right: 2%;
+        }
+        .popup form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .popup form button{
+            grid-column: 1/3;
+        }
+        .btn-cerrar-popup:hover{
+            color: black;
+        }
+        .popup h3{
+            font-size: 150%;
+            margin-bottom: 5%;
+        }
+        .popup h4{
+            font-size: 150%;
+            margin-bottom: 5%;
+        }
+        #btn-overlay{
+            display: none;
+        }
+        .boton{
+            color: black;
+            background: #C7C1E1;
+            padding: 1% 1%;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 2%;
+            margin-right: 2%;
+        }
+        .boton1{
+            color: black;
+            padding: 10% 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .btn-guardar{
+            border-radius: 5px;
+            margin: auto;
+            width: 60%;
+        }
+
+body{
+    padding: 0%;
+    width: 50%;
+    height: 100%;
+
+}
+
+footer{
+    width: 200%;
+    height: 10%;
+    font-size: 12px;
+            max-width: 200%;
+            min-height: 120px;
+            border: 1px solid #ffffff;
+            padding: 4px;
+            background:#ffffff;
+            text-align: center;
+            color: #000000;
+            
+        }#menu{
+    background-color: black ; 
+    width: 200%;
+    height: 1%;
+
+}
+.escoger-producto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu ul li{
+    display: inline-block;
+}
+#menu ul li a{
+    color: white;
+    display: block;
+    padding: 18px 50px;
+    text-decoration: none;   
+}
+#menu ul li a:hover{
+    background-color: #7B7D7D;
+}
+#menu img{
+    width: 75px;
+    height: 75px;
+}
+.B-ingresos{
+    background-color: #7B7D7D;
+}
+.parrafo{
+    position: relative;
+    bottom: 5px
+}
+.buscar{
+    background: #4B4B4B;
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    bottom: 5px
+}
+.default{
+    border: white;
+}.Fila{
+    position:static;  
+}.perfil{
+    width: 50px;
+    height: 65px;
+    position: relative;
+    right: -1215px
+}
+.perfil{
+    position: relative;
+    bottom: 215px
+}hr{
+            padding: 4px;
+            border-left: 0px;
+            border-right: 0px;
+            border-color: #000000;
+        }
+.Agregar{
+   position: relative;
+   right: 1%;
+   
+}
+.escoger-producto{
+    display: block;
+    position: relative;
+    top: 10%;
+}.popup1{
+    background: white;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+    padding: 20px;
+    border: solid 2px black;
+    border-radius:5px;
+    text-align: center;
+    width: 50%;
+}.titell{
+    color: black;
+}footer{
+    background: url('IMAGENES/Fondo.jpg')
+}input{
+    border:none;
+    border-bottom:0px solid;
+    border: solid 0px;
+}#Precio{
+    border:none;
+    border-bottom:1px solid;
+}#validationServer01{
+    position: relative;
+    right: -25%;
+    width: 50%;
+    border:none;
+    border-bottom:1px solid;
+}#Producto{
+    border:none;
+    border-bottom:1px solid;
+}#Valor{
+    border:none;
+    border-bottom:1px solid;
+}#botonxxx{
+    position: relative;
+    right: -50%;
+}.Cancelar{
+    color: white;
+    position: relative;
+    right: 0%;
+}#boton2{
+    position: relative;
+    right: 0%;
+}#Reporte-P{
+    position: relative;
+    left: 230px;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}#Reporte-I{
+    position: relative;
+    left: 550px;
+    right: 0%;
+    top: 0%;
+    bottom: 180px;
+}#Contenedor-de-registro1{
+    position: relative;
+    left: 90%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}#botonxxx211{
+    position: relative;
+    left: 50%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}.contenedor{
+    position: relative;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: center;
+}.escoger-producto{
+    position: relative;
+    left: 45%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}table{
+    position: relative;
+    left: 25%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%; 
+}#IGP{
+    position: relative;
+    left: 10%;
+}#IGI{
+    position: relative;
+    left: 120%;  
+}#IGI{
+    position: relative;
+    bottom: 9cm;  
+}

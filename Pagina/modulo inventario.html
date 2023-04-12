@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Super Store Inventory</title>
+	<link href="estilos/Estilos inventario.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/jpg" href="IMAGENES/SSI.png">
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  </head>
+<body background="IMAGENES/Fondo.jpg">
+<div class="contenedor">
+        <div id="menu">
+            
+            <ul style="text-align: center;">     
+            <li><a href="pagina ingreso.html">Inicio</a></li>
+            <li ><a href="modulo.html">Ingresos</a></li>
+            <li class="B-inventario"><a href="modulo inventario.html">Inventario</a></li>
+            <li><img src="IMAGENES/SSI.png" alt="Descripción de la imagen"/></li>
+            <li><a href="MODULO PROVEEDORES.html">Proveedores</a></li>
+            <li><a href="modulo soporte.html">Soporte</a></li>
+            <li><a href="Pagina_Principal.html">Cerrar sesion</a></li>
+            </ul>
+        </div>
+</div>
+    <hr>
+ <div class="cuerpo">
+    <div class="cont-filtros" >
+        <p>
+            <h3 id="a1">Filtros</h3>
+            <hr>
+            <h3 id="a2">Precio</h3>
+            <input class="form-check-input" type="radio" name="filt-precio" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    Mayor a menor precio
+  </label> <br>
+  <input class="form-check-input" type="radio" name="filt-precio" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    Mayor a menor precio
+  </label> <br>
+  <input class="form-check-input" type="radio" name="filt-precio" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    Mayor a menor precio
+  </label>
+  
+        <hr>
+        <p>
+            <h3 id="a3">Estado</h3> 
+            <input class="form-check-input" type="radio" name="filt-estado" id="flexRadioDefault2">
+  <label class="form-check-label" for="flexRadioDefault2">
+    Disponible
+  </label> <br>
+  <input class="form-check-input" type="radio" name="filt-estado" id="flexRadioDefault2">
+  <label class="form-check-label" for="flexRadioDefault2">
+    No disponible
+  </label>
+        </p>
+        <hr>
+        <p>
+          <h3 id="a4">Tipo</h3> 
+            <input class="form-check-input" type="radio" name="filt-tipo" id="flexRadioDefault3">
+  <label class="form-check-label" for="flexRadioDefault3">
+    Alimentos
+  </label> <br>
+  <input class="form-check-input" type="radio" name="filt-tipo" id="flexRadioDefault3">
+  <label class="form-check-label" for="flexRadioDefault3">
+    Aseo
+  </label> <br>
+        </p>
+    </div> 
+    <div class="cont-inventario">
+    <div style="padding: 4px; background-color: #c7c0bc"></div>
+        <p>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Codigo producto</th>
+                    <th scope="col">Nom.Producto</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Caducidad</th>
+                    <th scope="col">Cambios</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="tabla">
+                    <td><input type="text" id="XXXX" required></td>
+                    <th><input type="text" id="XXXX" required></th>
+                    <td><input type="text" id="XXXX" required></td>
+                    <td><input type="text" id="XXXX" required></td>
+                    <td><input type="text" id="XXXX" required></td>
+                    <td><input type="text" id="XXXX" required></td>
+                    
+                    <td><input type="checkbox" id="btn-eliminar" name="">
+                      <label for="btn-eliminar" class="eliminar">eliminar</label>
+                      <div class="overlay-eliminar" id="overlay-eliminar">
+                        <div class="popup-eliminar">
+                          <h3>Alerta</h3>
+                          <form>
+                            <p>
+                              <label>¿Esta seguro de eliminar este producto?</label> 
+                            </p>
+                            <button class="btn-aceptar" type="submit" for="btn-eliminar">Aceptar</button>
+                          </form>
+                          <a href="" for="btn-eliminar">Cancelar</a>
+                            </div>
+                           </div>
+                      <!--------------------------------------------->
+                      <div>
+                      <input type="checkbox" id="btn-editar" name="">
+                      <label for="btn-editar" class="editar">Editar</label>
+                      <div class="overlay-editar" id="overlay-editar">
+                        <div class="popup-editar">
+                          <h3>Editar producto</h3>
+                          <form class="was-validated">
+                            <div class="mb-3">
+                              <label for="Cantidad">Nom.Producto:</label><br> 
+                              <input type="text" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Valor Incorrecto</div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="Producto">Tipo:</label><br> 
+                              <input type="text" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Producto no Valido</div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="Precio">Precio:</label> <br>
+                              <input type="text" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Precio no Valido</div>
+                            </div>
+                            <div class="mb-3">
+                              <label for="Valor">Cantidad:</label> <br>
+                              <input type="text" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Valor no Valido</div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="Valor"> Caducidad:</label> <br>
+                              <input type="datetime-local" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Fecha no Accetada</div>
+                            </div><br><br>
+                            <div class="mb-3"> 
+                              <button id="botonxxx21" class="btn btn-primary" type="submit" >Enviar</button>
+                            </div>
+                          </form>
+                          <button id="botonxxx12" class="btn btn-primary" type="button" ><a  class="Cancelar" href="" for="btn-overlay">cancelar</a></button>
+                  </div>     
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr id="tabla">
+                    <td><input type="text" id="XXXX" required=""></td>
+                    <th><input type="text" id="XXXX" required=""></th>
+                    <td><input type="text" id="XXXX" required=""></td>
+                    <td><input type="text" id="XXXX" required=""></td>
+                    <td><input type="text" id="XXXX" required=""></td>
+                    <td><input type="text" id="XXXX" required=""></td>
+                    <td><input type="checkbox" id="btn-eliminar" name="">
+                      <label for="btn-eliminar" class="eliminar">eliminar</label>
+                      <div class="overlay-eliminar" id="overlay-eliminar">
+                        <div class="popup-eliminar">
+                          <h3>Alerta</h3>
+                          <form>
+                            <p>
+                              <label>¿Esta seguro de eliminar este producto?</label> 
+                            </p>
+                            <button class="btn-aceptar" type="submit" for="btn-eliminar">Aceptar</button>
+                          </form>
+                          <a href="" for="btn-eliminar">Cancelar</a>
+                        </div>
+                      </div>
+                      <!--------------------------------------------->
+                      <input type="checkbox" id="btn-editar" name="">
+                      <label for="btn-editar" class="editar">Editar</label>
+                      <div class="overlay-editar" id="overlay-editar">
+                        <div class="popup-editar">
+                          <h3>Editar producto</h3>
+                          <form class="was-validated">
+                            <div class="mb-3">
+                              <label for="Cantidad">Nom.Producto:</label><br> 
+                              <input type="text" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Valor Incorrecto</div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="Producto">Tipo:</label><br> 
+                              <input type="text" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Producto no Valido</div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="Precio">Precio:</label> <br>
+                              <input type="text" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Precio no Valido</div>
+                            </div>
+                            <div class="mb-3">
+                              <label for="Valor">Cantidad:</label> <br>
+                              <input type="text" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Valor no Valido</div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="Valor"> Caducidad:</label> <br>
+                              <input type="datetime-local" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Fecha no Accetada</div>
+                            </div><br><br>
+                            <div class="mb-3"> 
+                              <button id="botonxxx21" class="btn btn-primary" type="submit" >Enviar</button>
+                            </div>
+                          </form>
+                          <button id="botonxxx12" class="btn btn-primary" type="button" ><a  class="Cancelar" href="" for="btn-overlay">cancelar</a></button>
+                          
+                        </div>
+                      </div>
+                           </td>
+                  </tr>
+                  <tr id="tabla">
+                    <td><input type="text" id="XXXX" required=""></td>
+                    <th><input type="text" id="XXXX" required=""></th>
+                    <td><input type="text" id="XXXX" required=""></td>
+                    <td><input type="text" id="XXXX" required=""></td>
+                    <td><input type="text" id="XXXX" required=""></td>
+                    <td><input type="text" id="XXXX" required=""></td>
+                    <td><input type="checkbox" id="btn-eliminar" name="">
+                      <label for="btn-eliminar" class="eliminar">eliminar</label>
+                      <div class="overlay-eliminar" id="overlay-eliminar">
+                        <div class="popup-eliminar">
+                          <h3>Alerta</h3>
+                          <form>
+                            <p>
+                              <label>¿Esta seguro de eliminar este producto?</label> 
+                            </p>
+                            <button class="btn-aceptar" type="submit" for="btn-eliminar">Aceptar</button>
+                          </form>
+                          <a href="" for="btn-eliminar">Cancelar</a>
+                        </div>
+                      </div>
+                      <!--------------------------------------------->
+                      <input type="checkbox" id="btn-editar" name="">
+                      <label for="btn-editar" class="editar">Editar</label>
+                      <div class="overlay-editar" id="overlay-editar">
+                        <div class="popup-editar">
+                          <h3>Editar producto</h3>
+                          <form class="was-validated">
+                            <div class="mb-3">
+                              <label for="Cantidad">Nom.Producto:</label><br> 
+                              <input type="text" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Valor Incorrecto</div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="Producto">Tipo:</label><br> 
+                              <input type="text" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Producto no Valido</div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="Precio">Precio:</label> <br>
+                              <input type="text" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Precio no Valido</div>
+                            </div>
+                            <div class="mb-3">
+                              <label for="Valor">Cantidad:</label> <br>
+                              <input type="number" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Valor no Valido</div>
+                            </div>
+                          
+                            <div class="mb-3">
+                              <label for="Valor"> Caducidad:</label> <br>
+                              <input type="datetime-local" class="form-control" aria-label="file example" required>
+                              <div class="invalid-feedback">Fecha no Aceptada</div>
+                            </div><br><br>
+                            <div class="mb-3"> 
+                              <button id="botonxxx21" class="btn btn-primary" type="submit" >Enviar</button>
+                            </div>
+                          </form>
+                          <button id="botonxxx12" class="btn btn-primary" type="button" ><a  class="Cancelar" href="" for="btn-overlay">cancelar</a></button>
+                          
+                        </div>
+                      </div>
+                           </td>
+                  </tr>
+                </tbody>
+              </table>
+        </p>
+      </div>
+ </div> 
+ <div id="Contenedor-de-registro">
+  <input type="checkbox" id="btn-overlay" name="">
+      <label for="btn-overlay" class="boton">Registrar producto</label>
+      <div class="overlay " id="overlay">
+        <div class="popup">
+          <h3>Agregar producto</h3>
+          <form class="was-validated">
+            <div class="mb-3">
+              <label for="Cantidad">Nom.Producto:</label><br> 
+              <input type="text" class="form-control" aria-label="file example" required>
+              <div class="invalid-feedback">Valor Incorrecto</div>
+            </div>
+          
+            <div class="mb-3">
+              <label for="Producto">Tipo:</label><br> 
+              <input type="text" class="form-control" aria-label="file example" required>
+              <div class="invalid-feedback">Producto no Valido</div>
+            </div>
+          
+            <div class="mb-3">
+              <label for="Precio">Precio:</label> <br>
+              <input type="text" class="form-control" aria-label="file example" required>
+              <div class="invalid-feedback">Precio no Valido</div>
+            </div>
+            <div class="mb-3">
+              <label for="Valor">Cantidad:</label> <br>
+              <input type="text" class="form-control" aria-label="file example" required>
+              <div class="invalid-feedback">Valor no Valido</div>
+            </div>
+          
+            <div class="mb-3">
+              <label for="Valor"> Caducidad:</label> <br>
+              <input type="datetime-local" class="form-control" aria-label="file example" required>
+              <div class="invalid-feedback">Fecha no Accetada</div>
+            </div><br><br>
+            <div class="mb-3"> 
+              <button id="botonxxx21" class="btn btn-primary" type="submit" >Enviar</button>
+            </div>
+          </form>
+          <button id="boton2" class="btn btn-primary" type="button" ><a class="Cancelar" href="" for="btn-overlay">cancelar</a></button>
+        </div>
+    </div>
+</div>
+<hr style="border: solid 1px black;">
+<footer class="pie" background= "IMAGENES/Fondo.jpg">
+    Diseñado por Michael Steven Vanegas Gonzalez <a href="https://www.sic.gov.co/politica-privacidad">Privacy politic</a><br>
+    Contacto:<br>
+    <a href="vanegazgonzalez@gmail.com">Email</a><br>
+    Telefono: 3124454821<br>
+    Version: 1.0<br>
+    Derechos reservados por Michael Vanegas <br> 
+    <a href="error 404.html">Error 404</a>  y  <a href="error 500.html">Error 500</a><br>
+    <a href="Mapa-de-navegacion.html">Mapa de navegación</a>
+</footer>
+</body>
+</html>

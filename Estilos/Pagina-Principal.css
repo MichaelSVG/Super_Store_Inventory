@@ -46,4 +46,8 @@ ul, ol {
 .nav li ul li ul {
     right:-140px;
     top:0px;
+}footer{
+    position: relative;
+    top: 80%;
+    right: 28%;
 }

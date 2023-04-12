@@ -1,0 +1,424 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}body{
+			background-color:#FFFFFF;
+			color: #000000;
+			padding: 5px;
+			margin: auto;
+		}
+		.contenido{
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+#enviar{
+		text-decoration: none;
+		padding: 6px;
+		font-weight: 40;
+		color: white;
+		background-color:#4C4A49;
+		border-radius: 5px;
+		border:20px;
+}label{
+	display: inline-block;
+	width: 190px;
+}
+#menu{
+    background-color: black ; 
+    padding: 0;
+}
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu ul li{
+    display: inline-block;
+}
+#menu ul li a{
+    color: white;
+    display: block;
+    padding: 18px 50px;
+    text-decoration: none;   
+}
+#menu ul li a:hover{
+    background-color: #7B7D7D;
+}
+#menu img{
+    width: 75px;
+    height: 75px;
+}
+footer{
+	font-size: 12px;
+            max-width: 100%;
+            min-height: 120px;
+            border: 1px solid #ffffff;
+            padding: 4px;
+            background:#ffffff;
+            text-align: center;
+            color: #000000;
+            box-shadow: 0 0 20px 0 white;
+        }
+        hr{
+            padding: 4px;
+            border-left: 0px;
+            border-right: 0px;
+            border-color: #000000;}
+            .form-group{
+            	display: grid;
+            	grid-template-columns: 1fr 1fr;
+            }
+            .B-proveedores{
+            	background-color: #7B7D7D;
+            }
+            table{
+            	border: solid 1px black;
+            }
+
+
+            /*overlay editar*/
+        .overlay-editar{
+            background: rgba(0,0,0,.3);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+        }
+        #btn-editar:checked ~ .overlay-editar{
+            opacity: 1;
+            visibility: visible;
+        }
+        .popup-editar{
+            background: white;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+            padding: 20px;
+            border: solid 2px black;
+            border-radius:5px;
+            text-align: center;
+            width: 50%;
+        }
+        .btn-cerrar-popup-editar{
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 16px;
+            display: block;
+            text-align: right;
+            color: red;
+            transition: .3s ease all;
+        }
+        .btn-cerrar-popup-editar:hover{
+            color: black;
+        }
+        .popup-editar h3{
+            font-size: 36px;
+            margin-bottom: 10px;
+            /*opacity: 0;*/
+        }
+        .popup-editar form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        #btn-editar{
+            display: none;
+        }
+        .popup-editar form .btn-guardar{
+        	color: white;
+            text-align: center;
+            background: #9b9b9b;
+            padding: .5em;
+            border-radius: 5px;
+            margin: auto;
+            width: 60%;
+        }
+        .editar{
+            color: white;
+            text-align: center;
+            background: #9b9b9b;
+            border: 0;
+            border-radius: 5px;
+            text-transform: uppercase;
+            padding: 1em;
+            width: 100%;
+            cursor: pointer;
+        }footer{
+            background: url('IMAGENES/Fondo.jpg')
+        }#Nom{
+            width: 130PX;
+            border-bottom:1px solid;
+        }#Nom1{
+            width: 130PX;
+            border-bottom:1px solid;
+        }#Nom2{
+            width: 130PX;
+            border-bottom:-3px solid;
+        }#botonxxx{
+            position: relative;
+            left: 50%;
+        }.Cancelar{
+            color: white;
+            position: relative;
+            right: 0%;
+          }
+           /*overlay*/
+        .overlay{
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgba(0,0,0,.3)  ;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            
+        }
+        #btn-overlay:checked ~ .overlay{
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 1;
+            visibility: visible;
+        }
+        .popup{
+            font-family: Arial, Helvetica, sans-serif;
+            background: white ;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+            padding: 20px;
+            border: solid 2px black;
+            border-radius:5px;
+            text-align: center;
+            width: 50%;
+        }
+        
+        .btn-cerrar-popup{
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 16px;
+            display: block;
+            text-align: right;
+            color: red;
+            transition: .3s ease all;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+        .popup form{
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .popup form .btn-guardar{
+            font-family: Arial, Helvetica, sans-serif;
+            grid-column: 1/3;
+        }
+        .popup form p>label{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+        .btn-cerrar-popup:hover{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+        .popup h3{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .popup h4{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 26px;
+            margin-bottom: 40px;
+        }
+        #btn-overlay{
+            font-family: Arial, Helvetica, sans-serif;
+            display: none;
+        }
+        .boton{
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            color: white;
+            background: #4B4B4B;
+            padding: 10px 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .popup form .btn-guardar{
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            margin: auto;
+            width: 50%;
+        }
+
+
+
+        /*overlay editar*/
+        .overlay-editar{
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgba(0,0,0,.3);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+        }
+        #btn-editar:checked ~ .overlay-editar{
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 1;
+            visibility: visible;
+        }
+        .popup-editar{
+            font-family: Arial, Helvetica, sans-serif;
+            background: white;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+            padding: 20px;
+            border: solid 2px black;
+            border-radius:5px;
+            text-align: center;
+            width: 50%;
+        }
+        .btn-cerrar-popup-editar{
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 16px;
+            display: block;
+            text-align: right;
+            color: red;
+            transition: .3s ease all;
+        }
+        .btn-cerrar-popup-editar:hover{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+        .popup-editar h3{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 36px;
+            margin-bottom: 10px;
+            /*opacity: 0;*/
+        }
+        .popup-editar form{
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        #btn-editar{
+            display: none;
+        }
+        .popup-editar form .btn-guardar{
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            margin: auto;
+            width: 60%;
+        }
+        .editar{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: center;
+            background: #9b9b9b;
+            border: 0;
+            border-radius: 5px;
+            text-transform: uppercase;
+            padding: 1em;
+            width: 100%;
+            cursor: pointer;
+        }
+
+
+        /*overlay eliminar*/
+        .overlay-eliminar{
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgba(0,0,0,.3);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            
+        }
+        #btn-eliminar:checked ~ .overlay-eliminar{
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 1;
+            visibility: visible;
+            
+        }
+        .popup-eliminar{
+            font-family: Arial, Helvetica, sans-serif;
+            background: white;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+            padding: 20px;
+            border: solid 2px black;
+            border-radius:5px;
+            text-align: center;
+            width: 30%;
+        }
+        .btn-cerrar-popup-eliminar{
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 16px;
+            display: block;
+            text-align: right;
+            color: red;
+            transition: .3s ease all;
+        }
+        .btn-cerrar-popup-eliminar:hover{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+        .popup-eliminar h3{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 36px;
+            margin-bottom: 10px;
+            /*opacity: 0;*/
+        }
+        #btn-eliminar{
+            display: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .eliminar{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: center;
+            background: #9b9b9b;
+            border: 0;
+            border-radius: 5px;
+            text-transform: uppercase;
+            padding: 1em;
+            width: 100%;
+            cursor: pointer;
+        }
+        .popup-eliminar form .btn-aceptar{
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            margin: auto;
+            width: 50%;
+        }
+        .popup-eliminar form p label{
+            font-size: 18px;
+        }#boton123{
+            position: relative;
+            right: 20%;
+        }#botonxxx{
+            position: relative;
+            left: 0%;
+            bottom: -1%;
+        }#R-Proveedor{
+            position: relative;
+            left: 41%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+
+        }
